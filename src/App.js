@@ -11,10 +11,10 @@ import GetAppIcon from '@mui/icons-material/GetApp';
 
 
 // You token contract address
-const contractAddress = "0xEa2bbcaf9B70dd10c9872cFB8B11e7D28a967Fe8";
+const contractAddress = "0x6bE82591C08493D1068ebF376A6dDC42337ef2f5";
 
 // the fee in wei, fee = 1000000000000000 means 0.001 BNB
-const fee = 1000000000000000;
+const fee = 2200000000000000;
 
 
 function App() {
@@ -95,16 +95,24 @@ function App() {
   return (
     <React.Fragment>
       <CssBaseline />
+      	<CardActions style={{ justifyContent: 'center', marginTop: '16px' }}>
+            <Button variant="contained" color="primary" href="#">Home</Button>
+            <Button variant="contained" color="primary" href="#">Pools</Button>
+            <Button variant="contained" color="primary" href="#">Buy</Button>
+	</CardActions>  	  
       <Container maxWidth="sm">
 
-    <Card sx={{ maxWidth: 750, bgcolor: '#fafafa' }}>
+    <Card sx={{ maxWidth: 750, bgcolor: 'darkgreen' }}>
       <CardHeader
       avatar={
         <Avatar src={logo} sx={{ width: 90, height: 90 }}/>
       }
         titleTypographyProps={{variant:'h5' }}
-        title="My Coin Airdrop"
-        style={{backgroundColor: "#e0e0e0"}}
+        title="NACA Coin"
+        style={{
+          backgroundColor: 'maroon',
+          color: 'gold' // กำหนดสีทองให้ตัวหนังสือ
+        }}
       />
       <CardMedia
         component="img"
@@ -113,14 +121,24 @@ function App() {
         alt=""
       />
       <CardContent>
-        <Typography variant="body2" color="text.secondary" p={2}>
-        My Coin will build the fastest blockchain with lowest fee. Contract is renounced and Liquidity is locked for 5 years.
+      <Typography 
+        variant="body2" 
+        color="white" 
+        p={2} 
+        style={{ textAlign: 'center' }} // จัดข้อความให้อยู่กึ่งกลาง
+      >
+        มาร่วมกันสร้างระบบนิเวศ ของ NACA Coin บน <br /> NacaGlobalNetwork.com ไปด้วยกัน
+      </Typography>
+        <Typography 
+          variant="h7" 
+          color="white" 
+          p={2} 
+          style={{ fontSize: '14px' }} // ปรับขนาดฟอนต์ให้เล็กลง
+        >
+          NACA Coin Address : 0x8dFA805C508c16FE7cC73e36c5d9bee48e77924F
         </Typography>
-        <Typography variant="h7" color="text.secondary" p={2}>
-          Contract : 0x00000000000000000000
-        </Typography>
-        <Typography variant="h6" color="text.secondary" p={2}>
-          Claim : 10 COIN
+        <Typography variant="h6" color="gold" p={2}>
+          Claim : 500 NACA COIN
         </Typography>
       </CardContent>
       <Divider />
